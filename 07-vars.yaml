@@ -1,0 +1,12 @@
+- name: Print username and Password
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: username
+    prompt: Please enter your username
+    private: false
+
+  - name: Password
+    prompt: Please enter your Password
+    Private: true
+    
