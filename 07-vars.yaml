@@ -6,7 +6,7 @@
     prompt: Please enter your username
     private: false
 
-  - name: Password
+  - name: password
     prompt: Please enter your Password
     private: true
 
