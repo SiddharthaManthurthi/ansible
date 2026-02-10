@@ -3,12 +3,12 @@
   connection: local
   vars:
    topics: linux, shell, ansible, terraform
-   tagslist:
+   tagsmap :
       name: ansible
       project: roboshop
       omponent: catalogue
 
-   tagsmap: [
+   tagslist : [
         {
             "key": "name",
             "value": "ansible"
@@ -34,10 +34,10 @@
 
   - name: convert map to list
     ansible.builtin.debug:
-     msg: "{{ tagslist | dict2items }}" 
+     msg: "{{ tagsmap |dict2items }}" 
 
      #sg: "{{ tags | dict2items }}"
 
   - name: convert list to map
     ansible.builtin.debug:
-     msg: "{{ tagsmap | items2dict }}"
+     msg: "{{ tagslist | items2dict }}"
