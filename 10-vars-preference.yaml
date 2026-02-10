@@ -5,10 +5,10 @@
    NAME: "Ansible from playbook"
   # vars_files:
   # - course.yaml
-  vars_prompt:
-  - name: NAME
-    prompt: please enter your name
-    private: false
+  # vars_prompt:
+  # - name: NAME
+  #   prompt: please enter your name
+  #   private: false
   tasks:
   - name: print name
     # vars:
@@ -19,3 +19,4 @@
     # 1. args first preference
     # 2. task
     # 3. file
+    # 4. prompt
