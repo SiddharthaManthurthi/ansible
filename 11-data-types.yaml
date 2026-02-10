@@ -14,7 +14,7 @@
    - Ansible
   tasks:
   - name: print variables
-    ansible.bultin.debug:
+    ansible.builtin.debug:
       msg: | #if multiple lines use pipe
         Program: {{ PROGRAM }}
         Duration: {{ DURATION }}
