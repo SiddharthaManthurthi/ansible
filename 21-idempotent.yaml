@@ -1,0 +1,10 @@
+- name: check idempotency #If you run the same playbook multiple times,the result will always be the same — no extra changes
+  become: yes
+  hosts: local
+  connection: local
+  tasks:
+  - name: user creation
+    ansible.builtin.user:
+     name: johnd
+
+   
