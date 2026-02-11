@@ -4,7 +4,7 @@
   become: yes
   tasks:
   - name: check user exist or not
-    ansible.builtin.command: id roboshop  #using id to check if the user exist or not
+    ansible.builtin.command: id roboshop  #using id to check if the user exist or not 
     register: user_output
     ignore_errors: true # if error ansible wil not proccedd without this "rc": 1, means not success
   
@@ -13,5 +13,5 @@
      msg: "{{ user_output }}"  
   
   - name: create user
-    ansible.builtin.command: useradd roboshop
+    ansible.builtin.command: useradd roboshop  #and it is not idempotent if we use command so should use collections
     when: user_output.rc != 0    #"rc": 1, means not success
