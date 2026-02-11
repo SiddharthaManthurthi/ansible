@@ -57,3 +57,4 @@
   - name: convert to lower case
     ansible.builtin.dbug:
      msg: "{{ course | lower }}"
+     #converstion lower and upper
