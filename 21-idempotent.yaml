@@ -4,7 +4,7 @@
   connection: local
   tasks:
   - name: user creation
-    ansible.builtin.user:
+    ansible.builtin.user:  #this is collection if user exist it will not create and we need to use this
      name: johnd
 
    

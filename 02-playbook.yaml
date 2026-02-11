@@ -1,6 +1,14 @@
-- name: Hello World
+- name: Hello World #PLAYBOOK IS A LIST OF SPACE WHERE WE CAN EXECUTE THE SPECIFIC TASKS AGAINST THE REMOTE SERVERS
   hosts: web
   tasks:
   - name: print hello World
     ansible.builtin.debug:
      msg : "Hello World!"
+
+- name: PLAY-2
+  hosts: locaL
+  connection: local
+  tasks:
+  - name: play-2 and task-1
+    ansible.builtin.debug:
+     msg: "Hello from PLAY-2 and TASK-1"
